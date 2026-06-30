@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Документы для поступления в вуз СПб — 2026 | ИТМО · Политех · Военмех · СПбГУ</title>
+<meta name="description" content="Полный перечень документов для поступления в вузы Санкт-Петербурга в 2026 году: ИТМО, Политех Петра Великого, Военмех, СПбГУ. Где получить, зачем, кому и когда нужен каждый документ.">
+<style>
+  :root{
+    --bg:#0b1020;
+    --bg-soft:#10172e;
+    --card:#141d38;
+    --card-2:#18233f;
+    --line:#26314f;
+    --txt:#e8ecf6;
+    --muted:#9aa6c4;
+    --accent:#5b8cff;
+    --accent-2:#8b5cf6;
+    --green:#34d399;
+    --amber:#fbbf24;
+    --red:#fb7185;
+    --radius:18px;
+    --shadow:0 12px 40px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+    background:
+      radial-gradient(1200px 600px at 80% -10%, rgba(91,140,255,.18), transparent 60%),
+      radial-gradient(900px 500px at 0% 0%, rgba(139,92,246,.15), transparent 55%),
+      var(--bg);
+    color:var(--txt);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+  /* HERO */
+  header.hero{
+    position:relative;
+    padding:84px 0 56px;
+    text-align:center;
+    overflow:hidden;
+  }
+  .badge{
+    display:inline-flex;align-items:center;gap:8px;
+    background:rgba(91,140,255,.12);
+    border:1px solid rgba(91,140,255,.35);
+    color:#bcd0ff;
+    padding:7px 16px;border-radius:999px;
+    font-size:14px;font-weight:600;letter-spacing:.3px;
+    margin-bottom:22px;
+  }
+  .hero h1{
+    font-size:clamp(30px,5vw,52px);
+    line-height:1.1;margin:0 0 18px;
+    font-weight:800;letter-spacing:-.5px;
+    background:linear-gradient(120deg,#fff 20%,#bcd0ff 60%,#cbb6ff);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero p.lead{
+    font-size:clamp(16px,2.2vw,20px);
+    color:var(--muted);max-width:720px;margin:0 auto 28px;
+  }
+  .pills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:30px}
+  .pill{
+    background:var(--card);border:1px solid var(--line);
+    padding:8px 16px;border-radius:999px;font-weight:600;font-size:15px;
+  }
+  .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn{
+    display:inline-block;padding:13px 24px;border-radius:12px;font-weight:700;font-size:15px;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn-primary{background:linear-gradient(120deg,var(--accent),var(--accent-2));color:#fff}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(91,140,255,.4);text-decoration:none}
+  .btn-ghost{background:var(--card);border:1px solid var(--line);color:var(--txt)}
+  .btn-ghost:hover{border-color:var(--accent);text-decoration:none}
+
+  /* SECTION */
+  section{padding:46px 0}
+  .section-title{
+    font-size:clamp(24px,3.5vw,34px);font-weight:800;margin:0 0 8px;letter-spacing:-.3px;
+  }
+  .section-sub{color:var(--muted);margin:0 0 28px;font-size:16px}
+  .eyebrow{
+    color:var(--accent);font-weight:700;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;
+  }
+
+  /* ALERT */
+  .alert{
+    display:flex;gap:16px;align-items:flex-start;
+    background:linear-gradient(120deg,rgba(251,191,36,.10),rgba(251,113,133,.08));
+    border:1px solid rgba(251,191,36,.35);
+    border-radius:var(--radius);padding:22px 24px;margin:18px 0;
+  }
+  .alert .ic{font-size:26px;line-height:1}
+  .alert h3{margin:0 0 6px;font-size:18px}
+  .alert p{margin:0;color:#f2e6c9}
+
+  /* DOC CARDS */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:18px}
+  .doc{
+    background:linear-gradient(180deg,var(--card),var(--card-2));
+    border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px;position:relative;transition:transform .15s ease,border-color .15s ease;
+  }
+  .doc:hover{transform:translateY(-4px);border-color:var(--accent)}
+  .doc .num{
+    position:absolute;top:18px;right:20px;font-size:34px;font-weight:800;
+    color:rgba(255,255,255,.06);
+  }
+  .doc h3{margin:0 0 14px;font-size:19px;padding-right:40px}
+  .doc dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 12px;font-size:14.5px}
+  .doc dt{color:var(--accent);font-weight:700;white-space:nowrap}
+  .doc dd{margin:0;color:#d4dcf0}
+  .tag{
+    display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;margin-top:14px;
+  }
+  .tag.req{background:rgba(52,211,153,.14);color:var(--green);border:1px solid rgba(52,211,153,.3)}
+  .tag.opt{background:rgba(154,166,196,.14);color:var(--muted);border:1px solid rgba(154,166,196,.3)}
+
+  /* TABLE */
+  .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--card)}
+  table{width:100%;border-collapse:collapse;min-width:620px}
+  th,td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line);font-size:14.5px;vertical-align:top}
+  th{background:var(--bg-soft);font-weight:700;color:#cdd7f2;position:sticky;top:0}
+  tr:last-child td{border-bottom:none}
+  td strong{color:#fff}
+
+  /* UNIVERSITIES */
+  .uni-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:18px}
+  .uni{
+    background:linear-gradient(180deg,var(--card),var(--card-2));
+    border:1px solid var(--line);border-radius:var(--radius);padding:24px;
+  }
+  .uni-head{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+  .uni-logo{
+    width:52px;height:52px;border-radius:14px;display:grid;place-items:center;
+    font-weight:800;font-size:18px;color:#fff;flex-shrink:0;
+  }
+  .uni-head h3{margin:0;font-size:20px}
+  .uni-head a{font-size:13.5px;color:var(--muted)}
+  .uni ul{margin:0;padding-left:18px}
+  .uni li{margin-bottom:8px;font-size:14.5px;color:#d4dcf0}
+  .dates{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .date-chip{
+    background:var(--bg-soft);border:1px solid var(--line);border-radius:10px;
+    padding:8px 12px;font-size:13px;
+  }
+  .date-chip b{color:var(--accent)}
+
+  /* TIMELINE */
+  .timeline{position:relative;margin:10px 0;padding-left:30px}
+  .timeline::before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--accent),var(--accent-2))}
+  .tl-item{position:relative;margin-bottom:22px}
+  .tl-item::before{content:"";position:absolute;left:-29px;top:4px;width:16px;height:16px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(91,140,255,.18)}
+  .tl-item h4{margin:0 0 4px;font-size:16px}
+  .tl-item p{margin:0;color:var(--muted);font-size:14.5px}
+
+  /* SOURCES */
+  .src-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+  .src{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+  .src h4{margin:0 0 8px;font-size:15px}
+  .src a{display:block;font-size:13.5px;margin-bottom:4px;word-break:break-word}
+
+  /* FOOTER */
+  footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px;text-align:center}
+  .disclaimer{
+    background:var(--card);border:1px dashed var(--line);border-radius:var(--radius);
+    padding:18px 22px;margin-top:24px;color:var(--muted);font-size:14px;text-align:left;
+  }
+  ::selection{background:rgba(91,140,255,.35)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="badge">🎓 Приёмная кампания 2026 · Санкт-Петербург</span>
+    <h1>Документы для поступления в вуз</h1>
+    <p class="lead">Полный перечень документов для поступления на бакалавриат и специалитет в&nbsp;2026 году. Что, где получить, зачем, кому и когда нужно — только факты из официальных источников.</p>
+    <div class="pills">
+      <span class="pill">🔬 ИТМО</span>
+      <span class="pill">⚙️ Политех Петра Великого</span>
+      <span class="pill">🚀 Военмех</span>
+      <span class="pill">📚 СПбГУ</span>
+    </div>
+    <div class="cta">
+      <a class="btn btn-primary" href="#docs">Список документов</a>
+      <a class="btn btn-ghost" href="#universities">Особенности вузов</a>
+      <a class="btn btn-ghost" href="#timeline">Сроки 2026</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ГЛАВНЫЕ ИЗМЕНЕНИЯ -->
+  <section id="changes">
+    <div class="eyebrow">Что нового в 2026</div>
+    <h2 class="section-title">Главные изменения года</h2>
+    <p class="section-sub">Базовый перечень установлен Приказом Минобрнауки РФ №&nbsp;821 — он одинаков для всех вузов.</p>
+
+    <div class="alert">
+      <div class="ic">🚫</div>
+      <div>
+        <h3>Подача только 3 способами</h3>
+        <p>Вузы <b>больше не принимают документы через собственные сайты</b>. Осталось: лично в приёмной комиссии, почтой (заказное письмо с описью вложения) или через <b>Госуслуги</b> (суперсервис «Поступление в вуз онлайн»).</p>
+      </div>
+    </div>
+
+    <div class="alert">
+      <div class="ic">✍️</div>
+      <div>
+        <h3>«Согласие на зачисление» вместо оригинала аттестата</h3>
+        <p>Теперь ключевым является <b>согласие на зачисление</b>. Сформировать строго до <b>12:00 МСК 1 августа</b> (приоритетный этап) и до <b>5 августа</b> (основной этап). Без него не зачислят, даже при проходных баллах.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- БАЗОВЫЙ ПАКЕТ -->
+  <section id="docs">
+    <div class="eyebrow">Нужен всем абитуриентам</div>
+    <h2 class="section-title">Базовый пакет документов</h2>
+    <p class="section-sub">По Приказу Минобрнауки №&nbsp;821. Документы принимаются как оригиналы или копии — заверение не требуется.</p>
+
+    <div class="grid">
+
+      <article class="doc">
+        <span class="num">01</span>
+        <h3>Паспорт РФ</h3>
+        <dl>
+          <dt>Что:</dt><dd>Разворот с фото + страница с регистрацией (Военмех: стр. 2-3-4-5-19)</dd>
+          <dt>Где:</dt><dd>На руках; выдаёт МВД с 14 лет</dd>
+          <dt>Зачем:</dt><dd>Идентификация личности и гражданства</dd>
+          <dt>Когда:</dt><dd>Одновременно с заявлением</dd>
+        </dl>
+        <span class="tag req">Обязательно · всем</span>
+      </article>
+
+      <article class="doc">
+        <span class="num">02</span>
+        <h3>Документ об образовании</h3>
+        <dl>
+          <dt>Что:</dt><dd>Аттестат за 11 кл. с приложением / диплом СПО / диплом о ВО</dd>
+          <dt>Где:</dt><dd>Выдаёт школа или колледж по окончании</dd>
+          <dt>Зачем:</dt><dd>Подтверждает право на поступление и уровень образования</dd>
+          <dt>Когда:</dt><dd>Не позднее дня завершения приёма</dd>
+        </dl>
+        <span class="tag req">Обязательно · оригинал не нужен при подаче</span>
+      </article>
+
+      <article class="doc">
+        <span class="num">03</span>
+        <h3>СНИЛС</h3>
+        <dl>
+          <dt>Что:</dt><dd>Страховое свидетельство / электронное уведомление</dd>
+          <dt>Где:</dt><dd>СФР, Госуслуги или МФЦ</dd>
+          <dt>Зачем:</dt><dd>Идентификация в конкурсных списках (они по СНИЛС, а не по ФИО)</dd>
+          <dt>Когда:</dt><dd>Одновременно с заявлением</dd>
+        </dl>
+        <span class="tag req">Граждане РФ</span>
+      </article>
+
+      <article class="doc">
+        <span class="num">04</span>
+        <h3>Заявление о приёме</h3>
+        <dl>
+          <dt>Что:</dt><dd>Заявление на бюджет (КЦП) и/или на платные места</dd>
+          <dt>Где:</dt><dd>Автоматически через Госуслуги или бланк в приёмной комиссии</dd>
+          <dt>Зачем:</dt><dd>Официальное волеизъявление поступать</dd>
+          <dt>Когда:</dt><dd>В период приёма документов</dd>
+        </dl>
+        <span class="tag req">Обязательно · всем</span>
+      </article>
+
+      <article class="doc">
+        <span class="num">05</span>
+        <h3>Согласие на обработку ПД</h3>
+        <dl>
+          <dt>Что:</dt><dd>Согласие на обработку (Военмех — ещё и на распространение) персональных данных</dd>
+          <dt>Где:</dt><dd>Бланк вуза / форма на Госуслугах</dd>
+          <dt>Зачем:</dt><dd>Разрешает обработку данных и публикацию в списках</dd>
+          <dt>Когда:</dt><dd>Одновременно с заявлением</dd>
+        </dl>
+        <span class="tag req">Обязательно · подпись родителя для несовершеннолетних</span>
+      </article>
+
+      <article class="doc">
+        <span class="num">06</span>
+        <h3>Результаты ЕГЭ</h3>
+        <dl>
+          <dt>Что:</dt><dd>Баллы по предметам выбранного направления</dd>
+          <dt>Где:</dt><dd>Подтягиваются из ФИС ГИА автоматически</dd>
+          <dt>Зачем:</dt><dd>Основа конкурсного отбора</dd>
+          <dt>Когда:</dt><dd>В заявлении при подаче</dd>
+        </dl>
+        <span class="tag req">⚠️ СПбГУ: история обязательна для соц.-гум. направлений</span>
+      </article>
+
+      <article class="doc">
+        <span class="num">07</span>
+        <h3>Фотографии</h3>
+        <dl>
+          <dt>Что:</dt><dd>Цифровое фото (Политех: светлый фон, лицо ≥70%); 3×4 см — 4–6 шт.</dd>
+          <dt>Где:</dt><dd>Фотоателье / самостоятельно по требованиям</dd>
+          <dt>Зачем:</dt><dd>Допуск к внутренним испытаниям и личное дело</dd>
+          <dt>Когда:</dt><dd>При подаче / перед испытаниями</dd>
+        </dl>
+        <span class="tag req">Для сдающих вступительные испытания вуза</span>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ДОПОЛНИТЕЛЬНЫЕ ДОКУМЕНТЫ -->
+  <section id="extra">
+    <div class="eyebrow">По ситуации</div>
+    <h2 class="section-title">Дополнительные документы по категориям</h2>
+    <p class="section-sub">Нужны не всем — только при наличии соответствующих оснований.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Категория / кому</th><th>Документ</th><th>Зачем и когда</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Льготники</strong> (особые права)</td><td>Оригинал документа о праве на льготу (инвалидность, ветеран БД, сирота и т.п.)</td><td>Для квоты / преимущественного права. До завершения приёма без вступительных испытаний</td></tr>
+          <tr><td><strong>Инвалиды / ОВЗ</strong></td><td>Справка об инвалидности / заключение ПМПК об ОВЗ</td><td>Спецусловия на испытаниях и поступление по квоте. Не позднее дня завершения приёма</td></tr>
+          <tr><td><strong>Целевой приём</strong></td><td>Договор о целевом обучении + согласие на передачу данных (Военмех — «предложение от предприятия»)</td><td>Участие в целевой квоте</td></tr>
+          <tr><td><strong>Олимпиадники</strong></td><td>Диплом олимпиады (оригинал)</td><td>Право на БВИ или 100 баллов — обычно на одну программу</td></tr>
+          <tr><td><strong>Выпускники колледжей</strong></td><td>Диплом СПО с приложением (вместо аттестата)</td><td>Подтверждение СПО; возможны внутренние экзамены вуза</td></tr>
+          <tr><td><strong>Несовершеннолетние</strong></td><td>Согласие на обработку ПД, подписанное родителем / законным представителем</td><td>Юридическая дееспособность</td></tr>
+          <tr><td><strong>Смена ФИО</strong></td><td>Свидетельство о браке / о смене имени</td><td>Если ФИО расходятся в паспорте и аттестате</td></tr>
+          <tr><td><strong>Индивидуальные достижения</strong></td><td>Золотая медаль, ГТО, итоговое сочинение, волонтёрство и т.д.</td><td>Дополнительные баллы — по усмотрению поступающего</td></tr>
+          <tr><td><strong>Платное обучение</strong></td><td>Договор об оказании платных образовательных услуг (Политех)</td><td>При зачислении на контракт</td></tr>
+          <tr><td><strong>Иностранные документы</strong></td><td>Нотариальный перевод на русский + легализация (Политех)</td><td>Если документы на иностранном языке</td></tr>
+          <tr><td><strong>Внутренние экзамены вуза</strong></td><td>Документ о централизованном тестировании (если используется)</td><td>До завершения приёма без вступительных испытаний</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="alert" style="margin-top:24px">
+      <div class="ic">🏥</div>
+      <div>
+        <h3>Медицинская справка (форма 086/у)</h3>
+        <p>Справка об отсутствии медицинских противопоказаний к обучению. Получают в поликлинике по месту прикрепления. <b>Нужна не всем</b> — только для медицинских, педагогических, спортивных и некоторых военных/оборонных специальностей (актуально для ряда направлений Военмеха). Точный перечень — в правилах приёма конкретного вуза.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ВУЗЫ -->
+  <section id="universities">
+    <div class="eyebrow">Особенности приёма</div>
+    <h2 class="section-title">4 вуза Санкт-Петербурга</h2>
+    <p class="section-sub">Базовый пакет одинаков. Различаются способы подачи и сроки.</p>
+
+    <div class="uni-grid">
+
+      <article class="uni">
+        <div class="uni-head">
+          <div class="uni-logo" style="background:linear-gradient(135deg,#0ea5e9,#2563eb)">🔬</div>
+          <div>
+            <h3>ИТМО</h3>
+            <a href="https://abit.itmo.ru" target="_blank" rel="noopener">abit.itmo.ru</a>
+          </div>
+        </div>
+        <ul>
+          <li>Пакет: заявление, данные паспорта, аттестат с приложением, документы о льготах/достижениях, цифровые фото.</li>
+          <li>Оригинал аттестата при подаче <b>не нужен</b>.</li>
+          <li>Подача: лично (Кронверкский пр. 49, ауд. 1101), почтой, через ЕПГУ.</li>
+        </ul>
+        <div class="dates">
+          <span class="date-chip"><b>20 июня</b> — старт</span>
+          <span class="date-chip"><b>10 июля</b> — с внутр. испытаниями</span>
+          <span class="date-chip"><b>25 июля 17:00</b> — по ЕГЭ</span>
+        </div>
+      </article>
+
+      <article class="uni">
+        <div class="uni-head">
+          <div class="uni-logo" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">⚙️</div>
+          <div>
+            <h3>Политех Петра Великого (СПбПУ)</h3>
+            <a href="https://www.spbstu.ru/abit/" target="_blank" rel="noopener">spbstu.ru/abit</a>
+          </div>
+        </div>
+        <ul>
+          <li>Один комплект документов на выбор до 5 направлений.</li>
+          <li>Копии без заверения. Обязательны: паспорт, документ об образовании, согласие на обработку ПД, фото.</li>
+          <li>СНИЛС — при наличии; договор — для платного. Иностранные документы — с нотариальным переводом.</li>
+          <li>Приёмная: 8 (800) 707-18-99, abitur@spbstu.ru</li>
+        </ul>
+        <div class="dates">
+          <span class="date-chip"><b>20 июня</b> — старт приёма</span>
+        </div>
+      </article>
+
+      <article class="uni">
+        <div class="uni-head">
+          <div class="uni-logo" style="background:linear-gradient(135deg,#10b981,#0d9488)">🚀</div>
+          <div>
+            <h3>Военмех (БГТУ им. Устинова)</h3>
+            <a href="https://priem.voenmeh.ru" target="_blank" rel="noopener">priem.voenmeh.ru</a>
+          </div>
+        </div>
+        <ul>
+          <li>Копии: паспорт (стр. 2-3-4-5-19), документ об образовании, СНИЛС, документы о льготах, индивидуальные достижения.</li>
+          <li>Формы: согласие на зачисление, согласие на обработку и распространение ПД, заявление о приёме в рамках КЦП, приложение, расписка.</li>
+          <li>Подача: Госуслуги; почта (190005, СПб, ул. 1-я Красноармейская, 1/21); лично.</li>
+        </ul>
+        <div class="dates">
+          <span class="date-chip"><b>20 июня</b> — старт приёма</span>
+        </div>
+      </article>
+
+      <article class="uni">
+        <div class="uni-head">
+          <div class="uni-logo" style="background:linear-gradient(135deg,#8b5cf6,#6366f1)">📚</div>
+          <div>
+            <h3>СПбГУ</h3>
+            <a href="https://abiturient.spbu.ru" target="_blank" rel="noopener">abiturient.spbu.ru</a>
+          </div>
+        </div>
+        <ul>
+          <li>Подача <b>только электронно</b> через суперсервис «Поступление в вуз онлайн» (Госуслуги). Иностранцы — ещё через «Личный кабинет поступающего».</li>
+          <li>Пакет: заявление (КЦП и/или платное), паспорт, документ об образовании, СНИЛС, согласие на обработку ПД, документы об особых правах и достижениях, фото, портфолио (если предусмотрено).</li>
+          <li>⚠️ Для «Юриспруденции», «ГМУ», «Социологии» и др. — обязателен ЕГЭ по истории.</li>
+        </ul>
+        <div class="dates">
+          <span class="date-chip"><b>20 июня</b> — старт</span>
+          <span class="date-chip"><b>15 июля 18:00</b> — с вуз. экзаменами</span>
+          <span class="date-chip"><b>25 июля 18:00</b> — по ЕГЭ</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- СРОКИ -->
+  <section id="timeline">
+    <div class="eyebrow">Календарь</div>
+    <h2 class="section-title">Сроки приёмной кампании 2026</h2>
+    <p class="section-sub">Общие даты по приказу Минобрнауки (точные сроки уточняйте в правилах конкретного вуза).</p>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <h4>не позднее 20 июня</h4>
+        <p>Начало приёма документов на бюджетные места (бакалавриат и специалитет, все формы обучения).</p>
+      </div>
+      <div class="tl-item">
+        <h4>10–15 июля</h4>
+        <p>Завершение приёма для тех, кто сдаёт внутренние вступительные испытания вуза (ИТМО — 10 июля, СПбГУ — 15 июля 18:00).</p>
+      </div>
+      <div class="tl-item">
+        <h4>не позднее 25 июля</h4>
+        <p>Завершение приёма документов для поступающих по результатам ЕГЭ.</p>
+      </div>
+      <div class="tl-item">
+        <h4>до 12:00 МСК 1 августа</h4>
+        <p>Согласие на зачисление — приоритетный этап.</p>
+      </div>
+      <div class="tl-item">
+        <h4>до 5 августа</h4>
+        <p>Согласие на зачисление — основной этап. <b>Критично:</b> без согласия зачисления не будет.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ИСТОЧНИКИ -->
+  <section id="sources">
+    <div class="eyebrow">Проверяемые факты</div>
+    <h2 class="section-title">Источники</h2>
+    <p class="section-sub">Вся информация взята из официальных сайтов вузов и публикаций о приёме 2026.</p>
+
+    <div class="src-grid">
+      <div class="src">
+        <h4>🔬 ИТМО</h4>
+        <a href="https://abit.itmo.ru/page/66" target="_blank" rel="noopener">Правила подачи документов</a>
+        <a href="https://abit.itmo.ru/page/113" target="_blank" rel="noopener">Правила и сроки приёма 2026</a>
+      </div>
+      <div class="src">
+        <h4>⚙️ СПбПУ (Политех)</h4>
+        <a href="https://www.spbstu.ru/abit/bachelor/apply/the-list-of-documents/" target="_blank" rel="noopener">Перечень документов</a>
+        <a href="https://www.spbstu.ru/abit/bachelor/apply/" target="_blank" rel="noopener">Подать документы</a>
+      </div>
+      <div class="src">
+        <h4>🚀 Военмех</h4>
+        <a href="https://priem.voenmeh.ru/submit_documents" target="_blank" rel="noopener">Подача документов</a>
+        <a href="https://priem.voenmeh.ru/postuplenie" target="_blank" rel="noopener">Поступление 2026</a>
+      </div>
+      <div class="src">
+        <h4>📚 СПбГУ</h4>
+        <a href="https://abiturient.spbu.ru/programs/bakalavriat/" target="_blank" rel="noopener">Бакалавриат</a>
+        <a href="https://spbu.ru/postupayushchim/calendar" target="_blank" rel="noopener">Календарь приёма</a>
+      </div>
+      <div class="src">
+        <h4>📋 Общие правила</h4>
+        <a href="https://edu.sravni.ru/kursy/info/dokumenty-dlya-postupleniya-v-vuz-v-2026/" target="_blank" rel="noopener">Документы по приказу №821</a>
+        <a href="https://lenta.ru/articles/2026/01/19/kak-postupit-v-vuz/" target="_blank" rel="noopener">Lenta.ru — как поступить в 2026</a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      ⚠️ <b>Важно:</b> перечни и сроки вузы финализируют в своих «Правилах приёма на 2026 год». Перед подачей сверяйтесь с актуальной версией на официальном сайте конкретного вуза и для конкретного направления — особенно по медсправке 086/у и внутренним экзаменам.
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    Справочная страница для абитуриентов · Приёмная кампания 2026 · Санкт-Петербург<br>
+    Не является официальным документом. Данные собраны из открытых источников и могут меняться.
+  </div>
+</footer>
+
+</body>
+</html>
