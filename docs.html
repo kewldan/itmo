@@ -175,6 +175,35 @@
     padding:18px 22px;margin-top:24px;color:var(--muted);font-size:14px;text-align:left;
   }
   ::selection{background:rgba(91,140,255,.35)}
+
+  /* CALC */
+  .calc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;margin-bottom:22px}
+  .field{display:flex;flex-direction:column;gap:6px}
+  .field label{font-size:13px;color:var(--muted);font-weight:600}
+  .field input{background:var(--bg-soft);border:1px solid var(--line);border-radius:10px;color:var(--txt);padding:11px 13px;font-size:15px;font-family:inherit}
+  .field input:focus{outline:none;border-color:var(--accent)}
+  .field .hint{font-size:11px;color:#6b7799}
+  .results{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:14px;margin:6px 0 22px}
+  .res{background:linear-gradient(180deg,var(--card),var(--card-2));border:1px solid var(--line);border-radius:14px;padding:16px}
+  .res .k{font-size:12.5px;color:var(--muted);margin-bottom:6px}
+  .res .v{font-size:22px;font-weight:800;letter-spacing:-.5px}
+  .res .v.green{color:var(--green)}.res .v.amber{color:var(--amber)}.res .v.red{color:var(--red)}
+  .res .sub{font-size:11.5px;color:#6b7799;margin-top:4px}
+  canvas{width:100%;height:auto;display:block;background:var(--bg-soft);border:1px solid var(--line);border-radius:14px}
+  .legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:12px;font-size:13px;color:var(--muted)}
+  .legend span{display:inline-flex;align-items:center;gap:7px}
+  .legend i{width:16px;height:4px;border-radius:2px;display:inline-block}
+  /* CHECKER */
+  .checker-input{width:100%;background:var(--bg-soft);border:1px solid var(--line);border-radius:12px;color:var(--txt);padding:14px 16px;font-size:16px;font-family:inherit;margin-bottom:12px}
+  .checker-input:focus{outline:none;border-color:var(--accent)}
+  .check-verdict{font-size:14px;color:var(--muted);margin:0 0 12px}
+  .check-list{max-height:400px;overflow-y:auto;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+  .check-row{display:flex;align-items:center;gap:12px;padding:11px 16px;border-bottom:1px solid var(--line);font-size:14.5px}
+  .check-row:last-child{border-bottom:none}
+  .check-row .code{font-variant-numeric:tabular-nums;color:var(--muted);font-weight:700;min-width:58px}
+  .check-row .nm{flex:1;color:#d4dcf0}
+  .yes{color:var(--green);font-weight:700;white-space:nowrap}
+  .no{color:var(--red);font-weight:700;white-space:nowrap}
 </style>
 </head>
 <body>
@@ -192,8 +221,13 @@
     </div>
     <div class="cta">
       <a class="btn btn-primary" href="#docs">Список документов</a>
-      <a class="btn btn-ghost" href="#universities">Особенности вузов</a>
-      <a class="btn btn-ghost" href="#timeline">Сроки 2026</a>
+      <a class="btn btn-ghost" href="#med">Медицина</a>
+      <a class="btn btn-ghost" href="#army">Воинский учёт</a>
+      <a class="btn btn-ghost" href="#credit">Кредит</a>
+      <a class="btn btn-ghost" href="#calc">Калькулятор</a>
+      <a class="btn btn-ghost" href="#checker">Чекер</a>
+      <a class="btn btn-ghost" href="#universities">Вузы</a>
+      <a class="btn btn-ghost" href="#timeline">Сроки</a>
     </div>
   </div>
 </header>
@@ -348,9 +382,259 @@
     <div class="alert" style="margin-top:24px">
       <div class="ic">🏥</div>
       <div>
-        <h3>Медицинская справка (форма 086/у)</h3>
-        <p>Справка об отсутствии медицинских противопоказаний к обучению. Получают в поликлинике по месту прикрепления. <b>Нужна не всем</b> — только для медицинских, педагогических, спортивных и некоторых военных/оборонных специальностей (актуально для ряда направлений Военмеха). Точный перечень — в правилах приёма конкретного вуза.</p>
+        <h3>Медицинские документы — см. отдельную секцию ниже</h3>
+        <p>Бумажная справка 086/у отменена с 01.09.2025, теперь — электронная <b>СЭМД-196</b>. Нужна не всем, но обязательна для проживания в общежитии. Подробности — <a href="#med">в разделе «Медицина»</a>.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- МЕДИЦИНА -->
+  <section id="med">
+    <div class="eyebrow">Здоровье</div>
+    <h2 class="section-title">Медицинские документы</h2>
+    <p class="section-sub">С 01.09.2025 бумажная форма 086/у отменена (приказ Минздрава №&nbsp;274н). Вместо неё — электронный документ СЭМД-196.</p>
+
+    <div class="grid">
+
+      <article class="doc">
+        <span class="num">01</span>
+        <h3>Справка СЭМД-196</h3>
+        <dl>
+          <dt>Что:</dt><dd>Электронная медсправка нового образца (замена 086/у), подписывается ЭЦП врачей и главврача, уходит в систему вуза через Госуслуги</dd>
+          <dt>Где:</dt><dd>Поликлиника по месту прикрепления (до 18 лет — бесплатно по ОМС); платно — от ~3500 ₽</dd>
+          <dt>Срок:</dt><dd>Действует 6 месяцев — делать лучше весной</dd>
+        </dl>
+        <span class="tag req">По требованию вуза / для общежития</span>
+      </article>
+
+      <article class="doc">
+        <span class="num">02</span>
+        <h3>Кому обязательна</h3>
+        <dl>
+          <dt>Точно:</dt><dd>Медицинские, педагогические, спортивные направления</dd>
+          <dt>Точно:</dt><dd>Все, кто будет жить в общежитии (иногородним — почти всегда)</dd>
+          <dt>Также:</dt><dd>Для распределения в группу по физкультуре</dd>
+          <dt>IT/техн.:</dt><dd>При поступлении обычно не нужна — вуз решает сам</dd>
+        </dl>
+        <span class="tag opt">Зависит от направления</span>
+      </article>
+
+      <article class="doc">
+        <span class="num">03</span>
+        <h3>Врачи и анализы</h3>
+        <dl>
+          <dt>Врачи:</dt><dd>Терапевт, хирург, невролог, ЛОР, офтальмолог. Для медспец. — ещё психиатр-нарколог, дерматолог, стоматолог</dd>
+          <dt>Анализы:</dt><dd>Общий анализ крови и мочи; для медспец. — холестерин, глюкоза, ВИЧ, сифилис, гепатиты</dd>
+        </dl>
+        <span class="tag req">Стандартный медосмотр</span>
+      </article>
+
+    </div>
+
+    <div class="alert" style="margin-top:24px">
+      <div class="ic">🚀</div>
+      <div>
+        <h3>Военмех и военные учебные центры (ВУЦ)</h3>
+        <p>Для оборонных специальностей и обучения в ВУЦ возможна расширенная медкомиссия и требования по <b>категории годности к военной службе</b>. Точные требования — в правилах приёма по конкретному направлению.</p>
+      </div>
+    </div>
+
+    <div class="disclaimer" style="margin-top:18px">
+      🏠 <b>Только для тех, кто будет жить в общежитии</b> — большинству это не нужно. При заселении дополнительно просят: флюорографию (не старше 1 года), сертификат о прививках, полис ОМС, иногда справку из КВД и анализы на ВИЧ/RW (не ранее месяца до заселения). Если общежитие не нужно — этот пункт можно пропустить.
+    </div>
+  </section>
+
+  <!-- ВОИНСКИЙ УЧЁТ -->
+  <section id="army">
+    <div class="eyebrow">Для юношей</div>
+    <h2 class="section-title">Воинский учёт: приписное свидетельство</h2>
+    <p class="section-sub">Частый вопрос. Коротко: для подачи документов оно не обязательно, но понадобится дальше.</p>
+
+    <div class="grid">
+
+      <article class="doc">
+        <span class="num">01</span>
+        <h3>Нужно ли при подаче?</h3>
+        <dl>
+          <dt>Ответ:</dt><dd>В обязательный пакет (приказ №821) <b>не входит</b>. Вуз не вправе отказать в приёме документов из-за его отсутствия</dd>
+          <dt>Нюанс:</dt><dd>При очной подаче лично оригинал часто просят предъявить</dd>
+        </dl>
+        <span class="tag opt">Не обязательно для подачи</span>
+      </article>
+
+      <article class="doc">
+        <span class="num">02</span>
+        <h3>Зачем тогда нужно</h3>
+        <dl>
+          <dt>Что:</dt><dd>Документ воинского учёта; юноши получают в год 17-летия в военкомате</dd>
+          <dt>Зачем:</dt><dd>После зачисления военно-учётный стол вуза ставит на учёт и уведомляет военкомат</dd>
+          <dt>Главное:</dt><dd>Без постановки на учёт не оформить <b>отсрочку от призыва</b> на время учёбы</dd>
+        </dl>
+        <span class="tag req">Для отсрочки — обязательно</span>
+      </article>
+
+      <article class="doc">
+        <span class="num">03</span>
+        <h3>Военный билет</h3>
+        <dl>
+          <dt>Кому:</dt><dd>Отслужившим / снятым с призыва — вместо приписного</dd>
+          <dt>Зачем:</dt><dd>Тот же воинский учёт в вузе</dd>
+        </dl>
+        <span class="tag opt">У кого есть</span>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ЧАСТО ЗАБЫВАЮТ -->
+  <section id="forget">
+    <div class="eyebrow">Не упусти</div>
+    <h2 class="section-title">Что часто забывают</h2>
+    <p class="section-sub">Мелочи, из-за которых теряют место или время.</p>
+
+    <div class="grid">
+      <article class="doc">
+        <h3>📋 Заявление о приоритетах</h3>
+        <dl>
+          <dt>Что:</dt><dd>В 2026 зачисление одной волной по приоритетам — нужно проставить порядок направлений/вузов</dd>
+          <dt>Зачем:</dt><dd>Система зачислит на самый высокий приоритет, где прошёл по баллам</dd>
+        </dl>
+        <span class="tag req">Критично</span>
+      </article>
+      <article class="doc">
+        <h3>🤫 «День тишины»</h3>
+        <dl>
+          <dt>Когда:</dt><dd>3 августа (льготники) и 7 августа (основной этап)</dd>
+          <dt>Что:</dt><dd>В день приказа уже нельзя отозвать согласие, сменить приоритеты или отказаться</dd>
+        </dl>
+        <span class="tag req">Дедлайн решений</span>
+      </article>
+      <article class="doc">
+        <h3>💳 Реквизиты для стипендии</h3>
+        <dl>
+          <dt>Что:</dt><dd>Банковская карта «МИР» и реквизиты счёта</dd>
+          <dt>Зачем:</dt><dd>Для перечисления стипендии после зачисления</dd>
+        </dl>
+        <span class="tag opt">После зачисления</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- ОБРАЗОВАТЕЛЬНЫЙ КРЕДИТ -->
+  <section id="credit">
+    <div class="eyebrow">Платное обучение</div>
+    <h2 class="section-title">Образовательный кредит с господдержкой</h2>
+    <p class="section-sub">Ставка <b>3%</b> годовых (остальное субсидирует государство). До 15 лет, сумма до 10 млн ₽. Оформляют Сбер и ВТБ. Доход подтверждать не нужно, можно с 14 лет.</p>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <h4>1. Поступить на платное и получить место</h4>
+        <p>Сначала проходишь конкурс на платное (контрактное) обучение — кредит оформляется уже под конкретное зачисление.</p>
+      </div>
+      <div class="tl-item">
+        <h4>2. Заключить договор с вузом</h4>
+        <p>Подписываешь с вузом договор об оказании платных образовательных услуг и получаешь от него <b>счёт на оплату</b>.</p>
+      </div>
+      <div class="tl-item">
+        <h4>3. Подать заявку в банк</h4>
+        <p>Онлайн (СберБанк Онлайн → «Кредиты» → «Кредит на образование») или через менеджера. Нужны: <b>паспорт, договор с вузом, счёт на оплату</b>. Несовершеннолетним — согласие родителей.</p>
+      </div>
+      <div class="tl-item">
+        <h4>4. Банк одобряет и заключает договор</h4>
+        <p>После одобрения подписывается кредитный договор; банк <b>перечисляет оплату напрямую вузу</b>.</p>
+      </div>
+      <div class="tl-item">
+        <h4>5. Льготный период (учёба + 9 месяцев)</h4>
+        <p>Во время учёбы платишь только часть процентов: 1-й год — 40%, 2-й год — 60%, с 3-го года — 100% от процентов. Тело кредита пока не гасишь.</p>
+      </div>
+      <div class="tl-item">
+        <h4>6. Основной период погашения</h4>
+        <p>После окончания льготного периода — выплата основного долга и процентов по ставке 3% (срок до 15 лет).</p>
+      </div>
+    </div>
+
+    <div class="alert" style="margin-top:8px">
+      <div class="ic">💡</div>
+      <div>
+        <h3>Кому подходит</h3>
+        <p>Граждане РФ от <b>14 до 75 лет</b> (до 18 — с согласия родителей). Любая форма обучения (очная, очно-заочная, заочная). Вуз должен иметь лицензию и госаккредитацию. Документы для кредита минимальны: <b>паспорт + договор с вузом + счёт</b>. Можно оплачивать как весь срок, так и отдельный семестр.</p>
+      </div>
+    </div>
+
+    <div class="alert" style="margin-top:8px">
+      <div class="ic">📜</div>
+      <div>
+        <h3>Важно: с 1 декабря 2025 — только по перечню специальностей</h3>
+        <p>Кредит 3% даётся <b>не на любое направление</b>, а только на специальности из перечня (распоряжение Правительства РФ №&nbsp;3326-р от 17.11.2025) — сферы технологического лидерства: IT, инженерия, энергетика, машиностроение, транспорт, медицина и др. Проверь своё направление в <a href="#checker">чекере ниже</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- КАЛЬКУЛЯТОР -->
+  <section id="calc">
+    <div class="eyebrow">Посчитай заранее</div>
+    <h2 class="section-title">Калькулятор кредита 3%</h2>
+    <p class="section-sub">Модель учитывает льготный период (учёба + 9 мес. с пониженными процентами 40% / 60% / 100%), индексацию стоимости обучения и инфляцию. Цифры — оценочные.</p>
+
+    <div class="calc-grid">
+      <div class="field">
+        <label for="c_tuition">Стоимость года обучения, ₽</label>
+        <input id="c_tuition" type="number" value="350000" min="0" step="10000">
+        <span class="hint">за 1 курс, текущая цена</span>
+      </div>
+      <div class="field">
+        <label for="c_index">Индексация стоимости, %/год</label>
+        <input id="c_index" type="number" value="9" min="0" step="0.5">
+        <span class="hint">вузы поднимают цену ~ на инфляцию</span>
+      </div>
+      <div class="field">
+        <label for="c_study">Срок обучения, лет</label>
+        <input id="c_study" type="number" value="4" min="1" max="6" step="1">
+        <span class="hint">бакалавриат — 4, специалитет — 5–6</span>
+      </div>
+      <div class="field">
+        <label for="c_repay">Погашение после учёбы, лет</label>
+        <input id="c_repay" type="number" value="10" min="1" max="15" step="1">
+        <span class="hint">до 15 лет</span>
+      </div>
+      <div class="field">
+        <label for="c_rate">Ставка для заёмщика, %</label>
+        <input id="c_rate" type="number" value="3" min="0" max="30" step="0.1">
+        <span class="hint">льготная — 3%</span>
+      </div>
+      <div class="field">
+        <label for="c_infl">Инфляция, %/год</label>
+        <input id="c_infl" type="number" value="8" min="0" max="30" step="0.5">
+        <span class="hint">для расчёта реальной стоимости</span>
+      </div>
+    </div>
+
+    <div class="results" id="calcResults"></div>
+
+    <canvas id="calcChart" width="920" height="320" aria-label="График остатка долга и платежей"></canvas>
+    <div class="legend">
+      <span><i style="background:#5b8cff"></i> Остаток долга</span>
+      <span><i style="background:#8b5cf6"></i> Платёж в месяц</span>
+      <span><i style="background:#fbbf24"></i> Конец льготного периода</span>
+    </div>
+
+    <div class="disclaimer" style="margin-top:18px">
+      ⚠️ Расчёт упрощённый и приблизительный: банк выдаёт транши по семестрам/курсам, точную схему (распределение процентов льготного периода, аннуитет/дифференцированные платежи) определяет банк в договоре. «Реальная переплата» — это разница в сегодняшних деньгах между оплатой через кредит и оплатой из своего кармана сразу: при ставке 3% ниже инфляции кредит в реальном выражении часто выходит почти бесплатным.
+    </div>
+  </section>
+
+  <!-- ЧЕКЕР СПЕЦИАЛЬНОСТЕЙ -->
+  <section id="checker">
+    <div class="eyebrow">Подходит ли направление</div>
+    <h2 class="section-title">Чекер специальностей для кредита 3%</h2>
+    <p class="section-sub">По перечню распоряжения №&nbsp;3326-р (бакалавриат и специалитет). Введи код направления (например 09.03.04) или ключевое слово (программирование, машиностроение, юриспруденция…).</p>
+
+    <input class="checker-input" id="checkInput" type="text" placeholder="🔎 Код или название направления…" autocomplete="off">
+    <p class="check-verdict" id="checkVerdict"></p>
+    <div class="check-list" id="checkList"></div>
+
+    <div class="disclaimer" style="margin-top:18px">
+      ℹ️ Перечень задан укрупнёнными группами (первые 2 цифры кода). Если группа подходит — подходят все направления внутри неё. Не входят в перечень, например: <b>40.00.00 Юриспруденция</b>, <b>37.00.00 Психология</b>, <b>42.00.00 СМИ и журналистика</b>, <b>48.00.00 Теология</b>. Финальное решение — за банком; сверяйся с актуальной редакцией распоряжения.
     </div>
   </section>
 
@@ -504,6 +788,28 @@
         <a href="https://edu.sravni.ru/kursy/info/dokumenty-dlya-postupleniya-v-vuz-v-2026/" target="_blank" rel="noopener">Документы по приказу №821</a>
         <a href="https://lenta.ru/articles/2026/01/19/kak-postupit-v-vuz/" target="_blank" rel="noopener">Lenta.ru — как поступить в 2026</a>
       </div>
+      <div class="src">
+        <h4>🏥 Медицина</h4>
+        <a href="https://lenta.ru/articles/2026/06/24/spravka-dlya-postupleniya-v-vuz/" target="_blank" rel="noopener">Lenta.ru — медсправка и СЭМД-196</a>
+        <a href="https://vuzopedia.ru/articles/11930" target="_blank" rel="noopener">СЭМД-196 для вуза и общежития</a>
+        <a href="https://www.mos.ru/otvet-zdorovie/kak-oformit-medicinskuyu-spravku-v-kolledzh-ili-vuz/" target="_blank" rel="noopener">mos.ru — как оформить медсправку</a>
+      </div>
+      <div class="src">
+        <h4>🪖 Воинский учёт</h4>
+        <a href="https://armyhelp.ru/voinskiy-uchet-grazhdan/pripisnoe-svidetelstvo/" target="_blank" rel="noopener">Приписное свидетельство 2026</a>
+        <a href="https://myurist.online/articles/kakie-dokumenty-nuzhny-dlya-postupleniya-v-vuz-v-2025-godu" target="_blank" rel="noopener">Документы для поступления и приписное</a>
+      </div>
+      <div class="src">
+        <h4>💳 Образовательный кредит</h4>
+        <a href="https://www.sberbank.ru/ru/person/credits/money/credit_na_obrazovanie" target="_blank" rel="noopener">Сбер — кредит на образование (3%)</a>
+        <a href="https://fpa.ru/info/kredit-na-obrazovanie-pod-3-s-gosudarstvennoj-podderzhkoj/" target="_blank" rel="noopener">Условия, ставка 3% и оформление</a>
+        <a href="https://lenta.ru/articles/2026/01/27/kredit-na-obrazovanie-2026/" target="_blank" rel="noopener">Lenta.ru — кредит на образование 2026</a>
+      </div>
+      <div class="src">
+        <h4>📜 Перечень специальностей</h4>
+        <a href="https://www.consultant.ru/law/hotdocs/91565.html" target="_blank" rel="noopener">Распоряжение Правительства №3326-р</a>
+        <a href="https://www.sberbank.ru/common/img/uploaded/files/el_docs/common/special.pdf" target="_blank" rel="noopener">Полный перечень (PDF)</a>
+      </div>
     </div>
 
     <div class="disclaimer">
@@ -519,6 +825,248 @@
     Не является официальным документом. Данные собраны из открытых источников и могут меняться.
   </div>
 </footer>
+
+<script>
+(function(){
+  "use strict";
+  var fmt = function(x){
+    if(!isFinite(x)) return "—";
+    return Math.round(x).toLocaleString("ru-RU") + " ₽";
+  };
+  var num = function(id){ var v = parseFloat(document.getElementById(id).value); return isFinite(v)?v:0; };
+
+  /* ---------- КАЛЬКУЛЯТОР ---------- */
+  function compute(){
+    var tuition = Math.max(0, num("c_tuition"));
+    var idx     = Math.max(0, num("c_index"))/100;
+    var sy      = Math.min(6, Math.max(1, Math.round(num("c_study"))));
+    var ry      = Math.min(15, Math.max(1, Math.round(num("c_repay"))));
+    var rate    = Math.max(0, num("c_rate"))/100;
+    var infl    = Math.max(0, num("c_infl"))/100;
+    var mr      = rate/12;
+
+    var graceM = sy*12 + 9;             // льготный период
+    var bal = 0, disbursed = 0, gracePaid = 0;
+    var balSeries = [], paySeries = [];
+
+    var graceFactor = function(m){ var y = Math.floor(m/12)+1; return y<=1?0.4:(y===2?0.6:1.0); };
+
+    for(var m=0; m<graceM; m++){
+      if(m%12===0 && (m/12)<sy){             // выдача транша в начале курса
+        var tr = tuition*Math.pow(1+idx, m/12);
+        bal += tr; disbursed += tr;
+      }
+      var interest = bal*mr;
+      var pay = interest*graceFactor(m);
+      bal += (interest - pay);               // невыплаченные проценты капитализируются
+      gracePaid += pay;
+      balSeries.push(bal); paySeries.push(pay);
+    }
+
+    var n = ry*12;
+    var A = mr>0 ? bal*mr/(1-Math.pow(1+mr,-n)) : bal/n;   // аннуитет
+    var repayPaid = 0;
+    for(var k=0;k<n;k++){
+      var i2 = bal*mr; var pr = A - i2; bal -= pr; if(bal<0) bal=0;
+      repayPaid += A; balSeries.push(bal); paySeries.push(A);
+    }
+
+    var totalPaid = gracePaid + repayPaid;
+    var overpay   = totalPaid - disbursed;
+
+    // Реальная стоимость (приведение к сегодняшним деньгам по инфляции)
+    var mInfl = Math.pow(1+infl, 1/12)-1;
+    var realPaid = 0;
+    for(var t=0;t<paySeries.length;t++){ realPaid += paySeries[t]/Math.pow(1+mInfl, t); }
+    var realTuition = 0;
+    for(var y=0;y<sy;y++){ realTuition += tuition*Math.pow(1+idx,y)/Math.pow(1+infl,y); }
+    var realOverpay = realPaid - realTuition;
+
+    var graceAvg = graceM>0 ? gracePaid/graceM : 0;
+
+    return {disbursed:disbursed, totalPaid:totalPaid, overpay:overpay, annuity:A,
+            graceAvg:graceAvg, realOverpay:realOverpay,
+            balSeries:balSeries, paySeries:paySeries, graceM:graceM};
+  }
+
+  function renderResults(r){
+    var op = r.overpay>=0;
+    var ro = r.realOverpay;
+    var roClass = ro<=0 ? "green" : (ro < r.disbursed*0.15 ? "amber" : "red");
+    var cards = [
+      {k:"Выдано банком (тело)", v:fmt(r.disbursed), c:"", s:"сумма за весь срок обучения"},
+      {k:"Всего выплат банку", v:fmt(r.totalPaid), c:"", s:"за всё время кредита"},
+      {k:"Переплата (номинал)", v:fmt(r.overpay), c:"amber", s:"в «бумажных» рублях"},
+      {k:"Платёж в погашение", v:fmt(r.annuity)+"/мес", c:"", s:"после льготного периода"},
+      {k:"В льготный период", v:fmt(r.graceAvg)+"/мес", c:"green", s:"в среднем за учёбу + 9 мес"},
+      {k:"Реальная переплата", v:(ro<=0?"≈ 0 / выгода":fmt(ro)), c:roClass, s:"с учётом инфляции, vs оплата сразу"}
+    ];
+    document.getElementById("calcResults").innerHTML = cards.map(function(c){
+      return '<div class="res"><div class="k">'+c.k+'</div><div class="v '+c.c+'">'+c.v+
+             '</div><div class="sub">'+c.s+'</div></div>';
+    }).join("");
+  }
+
+  function drawChart(r){
+    var cv = document.getElementById("calcChart");
+    var ctx = cv.getContext("2d");
+    var W = cv.width, H = cv.height, padL=64, padR=58, padT=18, padB=28;
+    ctx.clearRect(0,0,W,H);
+    var bal = r.balSeries, pay = r.paySeries, N = bal.length;
+    if(N<2) return;
+    var maxBal = Math.max.apply(null, bal), maxPay = Math.max.apply(null, pay);
+    var x = function(i){ return padL + (W-padL-padR)*i/(N-1); };
+    var yB = function(v){ return H-padB - (H-padT-padB)*v/(maxBal||1); };
+    var yP = function(v){ return H-padB - (H-padT-padB)*v/(maxPay||1); };
+
+    // grid + Y labels (balance)
+    ctx.strokeStyle="#26314f"; ctx.fillStyle="#6b7799"; ctx.font="11px sans-serif"; ctx.lineWidth=1;
+    for(var g=0; g<=4; g++){
+      var yy = padT + (H-padT-padB)*g/4;
+      ctx.beginPath(); ctx.moveTo(padL,yy); ctx.lineTo(W-padR,yy); ctx.stroke();
+      var val = maxBal*(1-g/4);
+      ctx.textAlign="right"; ctx.fillText(Math.round(val/1000)+"к", padL-8, yy+4);
+    }
+    // X labels (годы)
+    var totalYears = N/12;
+    ctx.textAlign="center";
+    for(var yr=0; yr<=Math.ceil(totalYears); yr++){
+      var xi = x(Math.min(N-1, yr*12));
+      ctx.fillText(yr+"г", xi, H-10);
+    }
+
+    // конец льготного периода
+    var gx = x(Math.min(N-1, r.graceM));
+    ctx.strokeStyle="#fbbf24"; ctx.setLineDash([5,4]); ctx.beginPath();
+    ctx.moveTo(gx,padT); ctx.lineTo(gx,H-padB); ctx.stroke(); ctx.setLineDash([]);
+
+    // payment area (purple)
+    ctx.beginPath(); ctx.moveTo(x(0), H-padB);
+    for(var p=0;p<N;p++){ ctx.lineTo(x(p), yP(pay[p])); }
+    ctx.lineTo(x(N-1), H-padB); ctx.closePath();
+    ctx.fillStyle="rgba(139,92,246,.18)"; ctx.fill();
+    ctx.beginPath();
+    for(var p2=0;p2<N;p2++){ var fn=p2===0?"moveTo":"lineTo"; ctx[fn](x(p2), yP(pay[p2])); }
+    ctx.strokeStyle="#8b5cf6"; ctx.lineWidth=2; ctx.stroke();
+
+    // balance line (blue)
+    ctx.beginPath();
+    for(var b=0;b<N;b++){ var f2=b===0?"moveTo":"lineTo"; ctx[f2](x(b), yB(bal[b])); }
+    ctx.strokeStyle="#5b8cff"; ctx.lineWidth=2.5; ctx.stroke();
+
+    // right axis label (payment max)
+    ctx.fillStyle="#6b7799"; ctx.textAlign="left";
+    ctx.fillText(Math.round(maxPay/1000)+"к/мес", W-padR+6, padT+10);
+  }
+
+  function update(){
+    var r = compute();
+    renderResults(r);
+    drawChart(r);
+  }
+  ["c_tuition","c_index","c_study","c_repay","c_rate","c_infl"].forEach(function(id){
+    var el=document.getElementById(id); if(el) el.addEventListener("input", update);
+  });
+  update();
+
+  /* ---------- ЧЕКЕР СПЕЦИАЛЬНОСТЕЙ ---------- */
+  // Перечень распоряжения №3326-р: укрупнённые группы (бакалавриат ∪ специалитет) — ok:true
+  // Распространённые НЕ входящие группы — ok:false
+  var GROUPS = [
+    {c:"01",n:"Математика и механика",ok:true},
+    {c:"02",n:"Компьютерные и информационные науки",ok:true},
+    {c:"03",n:"Физика и астрономия",ok:true},
+    {c:"04",n:"Химия",ok:true},
+    {c:"05",n:"Науки о Земле",ok:true},
+    {c:"06",n:"Биологические науки",ok:true},
+    {c:"07",n:"Архитектура",ok:true},
+    {c:"08",n:"Техника и технологии строительства",ok:true},
+    {c:"09",n:"Информатика и вычислительная техника",ok:true,kw:"программирование софт it ит разработка"},
+    {c:"10",n:"Информационная безопасность",ok:true,kw:"кибербезопасность"},
+    {c:"11",n:"Электроника, радиотехника и системы связи",ok:true},
+    {c:"12",n:"Фотоника, приборостроение, оптические и биотехнические системы",ok:true},
+    {c:"13",n:"Электро- и теплоэнергетика",ok:true,kw:"энергетика"},
+    {c:"14",n:"Ядерная энергетика и технологии",ok:true},
+    {c:"15",n:"Машиностроение",ok:true},
+    {c:"16",n:"Физико-технические науки и технологии",ok:true},
+    {c:"17",n:"Оружие и системы вооружения",ok:true,kw:"военмех вооружение"},
+    {c:"18",n:"Химические технологии",ok:true},
+    {c:"19",n:"Промышленная экология и биотехнологии",ok:true},
+    {c:"20",n:"Техносферная безопасность и природообустройство",ok:true},
+    {c:"21",n:"Прикладная геология, горное дело, нефтегазовое дело и геодезия",ok:true},
+    {c:"22",n:"Технологии материалов",ok:true},
+    {c:"23",n:"Техника и технологии наземного транспорта",ok:true,kw:"транспорт автомобили"},
+    {c:"24",n:"Авиационная и ракетно-космическая техника",ok:true,kw:"космос ракеты авиация"},
+    {c:"25",n:"Аэронавигация и эксплуатация авиационной и ракетно-космической техники",ok:true},
+    {c:"26",n:"Техника и технологии кораблестроения и водного транспорта",ok:true,kw:"корабли флот"},
+    {c:"27",n:"Управление в технических системах",ok:true},
+    {c:"28",n:"Нанотехнологии и наноматериалы",ok:true},
+    {c:"29",n:"Технологии лёгкой промышленности",ok:true},
+    {c:"30",n:"Фундаментальная медицина",ok:true,kw:"медицина"},
+    {c:"31",n:"Клиническая медицина",ok:true,kw:"врач лечебное"},
+    {c:"32",n:"Науки о здоровье и профилактическая медицина",ok:true},
+    {c:"33",n:"Фармация",ok:true},
+    {c:"34",n:"Сестринское дело",ok:true},
+    {c:"35",n:"Сельское, лесное и рыбное хозяйство",ok:true},
+    {c:"36",n:"Ветеринария и зоотехния",ok:true},
+    {c:"37",n:"Психология",ok:false},
+    {c:"38",n:"Экономика и управление",ok:true,kw:"менеджмент бизнес финансы"},
+    {c:"39",n:"Социология и социальная работа",ok:true},
+    {c:"40",n:"Юриспруденция",ok:false,kw:"право юрист закон"},
+    {c:"41",n:"Политические науки и регионоведение",ok:true},
+    {c:"42",n:"Средства массовой информации и информационно-библиотечное дело",ok:false,kw:"журналистика реклама pr сми"},
+    {c:"43",n:"Сервис и туризм",ok:true},
+    {c:"44",n:"Образование и педагогические науки",ok:true,kw:"педагог учитель"},
+    {c:"45",n:"Языкознание и литературоведение",ok:true,kw:"лингвистика филология перевод"},
+    {c:"46",n:"История и археология",ok:true},
+    {c:"47",n:"Философия, этика и религиоведение",ok:true},
+    {c:"48",n:"Теология",ok:false},
+    {c:"49",n:"Физическая культура и спорт",ok:true},
+    {c:"50",n:"Искусствознание",ok:true},
+    {c:"51",n:"Культуроведение и социокультурные проекты",ok:true},
+    {c:"52",n:"Сценические искусства и литературное творчество",ok:true},
+    {c:"53",n:"Музыкальное искусство",ok:true},
+    {c:"54",n:"Изобразительное и прикладные виды искусств",ok:true},
+    {c:"55",n:"Экранные искусства",ok:true},
+    {c:"56",n:"Военное управление",ok:true},
+    {c:"57",n:"Обеспечение государственной безопасности",ok:true},
+    {c:"58",n:"Востоковедение и африканистика",ok:true}
+  ];
+
+  var listEl = document.getElementById("checkList");
+  var verdEl = document.getElementById("checkVerdict");
+  var inputEl = document.getElementById("checkInput");
+
+  function rowHTML(g){
+    var badge = g.ok ? '<span class="yes">✓ подходит</span>' : '<span class="no">✕ не входит</span>';
+    return '<div class="check-row"><span class="code">'+g.c+'.00.00</span><span class="nm">'+g.n+'</span>'+badge+'</div>';
+  }
+  function render(q){
+    q = (q||"").trim().toLowerCase();
+    var code2 = (q.match(/^(\d{2})/)||[])[1];   // первые 2 цифры из введённого кода
+    var list = GROUPS.filter(function(g){
+      if(!q) return true;
+      if(code2 && g.c===code2) return true;
+      return g.n.toLowerCase().indexOf(q)>=0 || (g.kw&&g.kw.indexOf(q)>=0) || g.c.indexOf(q)===0;
+    });
+    listEl.innerHTML = list.length ? list.map(rowHTML).join("")
+                                   : '<div class="check-row"><span class="nm">Ничего не найдено — попробуй другой код или слово.</span></div>';
+    if(code2){
+      var hit = GROUPS.filter(function(g){return g.c===code2;})[0];
+      if(hit){
+        verdEl.innerHTML = hit.ok
+          ? '✅ <b style="color:var(--green)">Подходит:</b> группа '+code2+'.00.00 «'+hit.n+'» входит в перечень — кредит 3% доступен.'
+          : '⛔ <b style="color:var(--red)">Не входит:</b> группа '+code2+'.00.00 «'+hit.n+'» отсутствует в перечне — льготный кредит недоступен.';
+      } else {
+        verdEl.innerHTML = 'ℹ️ Группа '+code2+'.00.00 не найдена в перечне приоритетных — скорее всего, не подходит.';
+      }
+    } else {
+      verdEl.textContent = q ? 'Найдено групп: '+list.length : 'Всего групп в перечне (подходят): '+GROUPS.filter(function(g){return g.ok;}).length+' из '+GROUPS.length+' показанных.';
+    }
+  }
+  if(inputEl){ inputEl.addEventListener("input", function(){ render(inputEl.value); }); render(""); }
+})();
+</script>
 
 </body>
 </html>
